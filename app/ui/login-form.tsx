@@ -8,8 +8,13 @@ import {
   ExclamationCircleIcon,
   KeyIcon,
 } from '@heroicons/react/24/outline';
+import { Metadata } from 'next';
 import { useFormState, useFormStatus } from 'react-dom';
 import { Button } from './button';
+
+export const metadata: Metadata = {
+  title: 'Login',
+};
 
 export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
